@@ -14,7 +14,7 @@ const Landing = () => {
     alert("Landing page is rendered successfully:)");
 
     const submitHandler = (event) => {
-        console.log("submit handler is triggered!");
+        alert("submit handler is triggered!");
 
         event.preventDefault();
         const username = event.target.username.value;

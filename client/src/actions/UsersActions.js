@@ -7,7 +7,7 @@ const BASE_ROUTE = 'https://rhe5u2o28i.execute-api.us-east-1.amazonaws.com/dev/u
 async function sendPost(route, msg) {
     route = BASE_ROUTE;
     try{
-        console.log("doing post to the set route...");
+        alert("doing post to the set route...");
         return await axios.post(route, msg);
     }catch(error){
         return {data: ERROR}
@@ -28,8 +28,8 @@ export const login = (username, password) => async dispatch => {
         username: username,
         action: "GET"
     }
-    console.log("login function called!");
-    
+    alert("login function called!");
+
     sendPost('users/login', user).then(res => {
         if(res.body.username === username && res.body.password === password)
             dispatch({
