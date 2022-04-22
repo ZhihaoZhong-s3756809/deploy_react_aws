@@ -1,0 +1,75 @@
+html
+{
+	text-align: left;
+}
+
+.card
+{
+    width: 330px;
+    height:200px;
+    text-align: right;
+    background-color: azure;
+    border: none;
+}
+
+.card:hover
+{
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.cardImg
+{
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    height: 130px;
+    width: 130px;
+}
+
+.logoutBtn
+{
+    height: 42px;
+    width: 88px;
+    display: block;
+	background-color: #d44a4a;
+	border: 1px solid #3762bc;
+	color: #fff;
+	padding: 9px 14px;
+	font-size: 15px;
+	line-height: normal;
+	border-radius: 5px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.cardTxt
+{
+    width:200px;
+    height:180px;
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    color:black;
+}
+
+.qCard
+{
+    width: 880px;
+    height:100px;
+    text-align: right;
+    background-color: azure;
+    border: none;
+    color: black;
+}
+
+.btn{
+	margin-top: 26px;
+    border: none;
+    border-radius: 5px;
+    background-color:rgb(0, 145, 255);
+	box-shadow: 6px 6px 3px #888888;
+    width: 160px; 
+    height: 40px;
+}
