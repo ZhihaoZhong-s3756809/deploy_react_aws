@@ -33,6 +33,7 @@ export const login = (username, password) => async dispatch => {
     sendPost('users/login', user).then(res => {
         alert("sendpost done then...");
         alert("response: ", res);
+        alert(res.body);
         if(res.body.username === username && res.body.password === password){
             dispatch({
                 type: LOGIN
