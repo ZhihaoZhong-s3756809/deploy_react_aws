@@ -11,7 +11,11 @@ const Landing = () => {
 
     const history = useNavigate();
 
+    console.log("Landing page is rendered successfully:)");
+
     const submitHandler = (event) => {
+        console.log("submit handler is triggered!");
+
         event.preventDefault();
         const username = event.target.username.value;
         const password = event.target.password.value;

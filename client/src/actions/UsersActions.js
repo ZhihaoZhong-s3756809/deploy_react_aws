@@ -28,6 +28,8 @@ export const login = (username, password) => async dispatch => {
         username: username,
         action: "GET"
     }
+    console.log("login function called!");
+    
     sendPost('users/login', user).then(res => {
         if(res.body.username === username && res.body.password === password)
             dispatch({

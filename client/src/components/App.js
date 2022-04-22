@@ -6,6 +6,7 @@ import Rmit from './RMIT';
 import Survey from './Survey';
 
 export default function App() {
+    console.log('App is running:)');
     <Router/>;     
     return (
         <BrowserRouter>
