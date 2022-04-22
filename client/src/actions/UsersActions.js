@@ -31,17 +31,22 @@ export const login = (username, password) => async dispatch => {
     alert("login function called!");
 
     sendPost('users/login', user).then(res => {
-        if(res.body.username === username && res.body.password === password)
+        alert("sendpost done then...");
+        if(res.body.username === username && res.body.password === password){
             dispatch({
                 type: LOGIN
-            })
-        else
+            });
+            alert("login successfully:)");
+        }
+        else{
             dispatch({
                 type: ERROR
-            })
+            });
+            alert("login failed:(");
+        }
     })
 
-    alert("sendPost done!");
+    alert("after sendPost!");
 }
 
 export const register = (username, password, confirmPassword) => async dispatch => {
