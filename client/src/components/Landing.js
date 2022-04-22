@@ -11,7 +11,7 @@ const Landing = () => {
 
     const history = useNavigate();
 
-    console.log("Landing page is rendered successfully:)");
+    alert("Landing page is rendered successfully:)");
 
     const submitHandler = (event) => {
         console.log("submit handler is triggered!");
