@@ -21,6 +21,7 @@ const Landing = () => {
         const password = event.target.password.value;
 
         login(username, password)(dispacth => {
+            alert("back and get dispatch type: ", dispacth.type);
             if(dispacth.type === LOGIN) {
                 cookie.save('username', username, {path:'/'});
                 history('/home', {state: username});
