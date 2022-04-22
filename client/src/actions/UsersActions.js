@@ -40,6 +40,8 @@ export const login = (username, password) => async dispatch => {
                 type: ERROR
             })
     })
+
+    alert("sendPost done!");
 }
 
 export const register = (username, password, confirmPassword) => async dispatch => {
