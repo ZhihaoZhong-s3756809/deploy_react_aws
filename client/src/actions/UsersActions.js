@@ -28,7 +28,7 @@ export const login = (username, password) => async dispatch => {
         password: password,
         action: "GET"
     }
-    sendGet('users/login', user).then(res => {
+    sendPost('users/login', user).then(res => {
         if(res.username === username && res.password === password)
             dispatch({
                 type: LOGIN
