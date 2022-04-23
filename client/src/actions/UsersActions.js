@@ -1,4 +1,5 @@
 import axios from 'axios';
+import fetch from 'node-fetch';
 import { ERROR } from '../types/Common';
 import { LOGIN, REGISTER } from '../types/Users';
 
@@ -7,10 +8,13 @@ const BASE_ROUTE = 'https://rhe5u2o28i.execute-api.us-east-1.amazonaws.com/dev/u
 async function sendPost(route, msg) {
     route = BASE_ROUTE;
     try{
-        let postRes = await axios.post(route, msg, {headers: {
-            "Content-Type" : "application/json",
-            "Access-Control-Request-Methods": "POST"
-        }});
+        let postRes = await fetch(route, {
+            method: "POST",
+            body: msg,
+            headers: {"Content-Type" : "application/json"},
+            mode: "cors",
+            cache: "default"
+        });
         console.log(postRes);
         return postRes;
     }catch(error){
