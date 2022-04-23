@@ -9,8 +9,7 @@ async function sendPost(route, msg) {
     try{
         let postRes = await axios.post(route, msg, {headers: {
             "Content-Type" : "application/json",
-            "Access-Control-Request-Methods": "POST", 
-            "Access-Control-Request-Headers": "Content-Type"
+            "Access-Control-Request-Methods": "POST"
         }});
         console.log(postRes);
         return postRes;
