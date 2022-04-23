@@ -2,12 +2,12 @@ import axios from 'axios';
 import { ERROR } from '../types/Common';
 import { LOGIN, REGISTER } from '../types/Users';
 
-const BASE_ROUTE = ' https://rhe5u2o28i.execute-api.us-east-1.amazonaws.com/dev/users';
+const BASE_ROUTE = 'https://rhe5u2o28i.execute-api.us-east-1.amazonaws.com/dev/users';
 
 async function sendPost(route, msg) {
     route = BASE_ROUTE;
     try{
-        let postRes = await axios.post(route, JSON.stringify(msg));
+        let postRes = await axios.post(route, msg);
         console.log(postRes);
         return postRes;
     }catch(error){
