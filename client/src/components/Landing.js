@@ -11,10 +11,7 @@ const Landing = () => {
 
     const history = useNavigate();
 
-    alert("Landing page is rendered successfully:)");
-
     const submitHandler = (event) => {
-        alert("submit handler is triggered!");
 
         event.preventDefault();
         const username = event.target.username.value;
