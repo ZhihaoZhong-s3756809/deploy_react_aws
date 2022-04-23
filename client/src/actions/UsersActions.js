@@ -7,7 +7,10 @@ const BASE_ROUTE = ' https://rhe5u2o28i.execute-api.us-east-1.amazonaws.com/dev/
 async function sendPost(route, msg) {
     route = BASE_ROUTE;
     try{
-        let postRes = await axios.post(route, msg);
+        let postRes = await axios.post(route, msg, {headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*"
+        }});
         console.log(postRes);
         return postRes;
     }catch(error){
@@ -44,8 +47,6 @@ export const login = (username, password) => async dispatch => {
             alert("login failed:(");
         }
     })
-
-    alert("after sendPost!");
 }
 
 export const register = (username, password, confirmPassword) => async dispatch => {
