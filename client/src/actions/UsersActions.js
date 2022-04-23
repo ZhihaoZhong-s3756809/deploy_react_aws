@@ -2,7 +2,7 @@ import axios from 'axios';
 import { ERROR } from '../types/Common';
 import { LOGIN, REGISTER } from '../types/Users';
 
-const BASE_ROUTE = 'https://rhe5u2o28i.execute-api.us-east-1.amazonaws.com/dev/users';
+const BASE_ROUTE = ' https://rhe5u2o28i.execute-api.us-east-1.amazonaws.com/dev/users';
 
 async function sendPost(route, msg) {
     route = BASE_ROUTE;
