@@ -7,9 +7,9 @@ const BASE_ROUTE = ' https://rhe5u2o28i.execute-api.us-east-1.amazonaws.com/dev/
 async function sendPost(route, msg) {
     route = BASE_ROUTE;
     try{
-        let postRes = axios.post(route, msg);
+        let postRes = await axios.post(route, msg);
         console.log(postRes);
-        return await postResult;
+        return postRes;
     }catch(error){
         return {data: ERROR}
     }
