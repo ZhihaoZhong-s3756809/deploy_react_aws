@@ -10,8 +10,6 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Landing /> } />
-
                 <Route path='/register' element={<Register /> } />
 
                 <Route path='/home' element={<Home />} />
@@ -19,6 +17,8 @@ export default function App() {
                 <Route path='rmit' element={<Rmit />} />
 
                 <Route path='survey' element={<Survey />} />
+
+                <Route path='/' element={<Landing /> } />
             </Routes>
         </BrowserRouter>
     );
