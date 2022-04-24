@@ -17,6 +17,12 @@ const Rmit = () => {
     var q3 = 'Are you satisfied with the facilities in the school?';
     var q4 = 'Are you satisfied with the service within the course?';
     var q5 = 'Are you satisfied with the assignments/examinations within this course?';
+    
+    cookie.save('q1', q1);
+    cookie.save('q2', q2);
+    cookie.save('q3', q3);
+    cookie.save('q4', q4);
+    cookie.save('q5', q5);
 
 //     getSurveyQuestion(uniname, 'Bachelor of Computer Science', 'q1')(dispatch => {
 //         if(dispatch.type === SUCCESS){
