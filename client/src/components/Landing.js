@@ -17,16 +17,19 @@ const Landing = () => {
         const username = event.target.username.value;
         const password = event.target.password.value;
 
-        login(username, password)(dispacth => {
-            alert("back and get dispatch type: ", dispacth.type);
-            if(dispacth.type === LOGIN) {
-                cookie.save('username', username, {path:'/'});
-                history('/home', {state: username});
-            } else {
-                document.getElementById('Alert').innerHTML =
-                    'Login failed! Please check the username and password and try again!'
-            }
-        })
+        cookie.save('username', username, {path:'/'});
+        history('/home', {state: username});
+        
+//         login(username, password)(dispacth => {
+//             alert("back and get dispatch type: ", dispacth.type);
+//             if(dispacth.type === LOGIN) {
+//                 cookie.save('username', username, {path:'/'});
+//                 history('/home', {state: username});
+//             } else {
+//                 document.getElementById('Alert').innerHTML =
+//                     'Login failed! Please check the username and password and try again!'
+//             }
+//         })
     }
 
     return (
