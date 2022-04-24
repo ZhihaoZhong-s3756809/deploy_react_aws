@@ -1,5 +1,5 @@
 import axios from 'axios';
-import fetch from 'node-fetch';
+//import fetch from 'node-fetch';
 import { ERROR } from '../types/Common';
 import { LOGIN, REGISTER } from '../types/Users';
 
