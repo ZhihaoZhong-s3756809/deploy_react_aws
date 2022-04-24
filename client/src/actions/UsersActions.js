@@ -33,23 +33,23 @@ export const login = (username, password) => async dispatch => {
         username: username,
         action: "GET"
     }
-        dispatch({
-                 type: LOGIN
-             });
-//     sendPost('users/login', user).then(res => {
-//         if(res.body.username === username && res.body.password === password){
-//             dispatch({
-//                 type: LOGIN
-//             });
-//             alert("login successfully:)");
-//         }
-//         else{
-//             dispatch({
-//                 type: ERROR
-//             });
-//             alert("login failed:(");
-//         }
-//     })
+//         dispatch({
+//                  type: LOGIN
+//              });
+    sendPost('users/login', user).then(res => {
+        if(res.body.username === username && res.body.password === password){
+            dispatch({
+                type: LOGIN
+            });
+            alert("login successfully:)");
+        }
+        else{
+            dispatch({
+                type: ERROR
+            });
+            alert("login failed:(");
+        }
+    })
 }
 
 export const register = (username, password, confirmPassword) => async dispatch => {
