@@ -37,7 +37,7 @@ export const login = (username, password) => async dispatch => {
 //                  type: LOGIN
 //              });
     sendPost('users/login', user).then(res => {
-        if(res.body.username === username && res.body.password === password){
+        if(res.body.username === username && res.password === password){
             dispatch({
                 type: LOGIN
             });
